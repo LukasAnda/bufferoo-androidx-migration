@@ -11,6 +11,7 @@ dependencies {
     implementation dataDependencies.rxJava
     implementation dataDependencies.rxAndroid
     implementation dataDependencies.rxKotlin
+    implementation dataDependencies.multidex
 
     testImplementation dataTestDependencies.junit
     testImplementation dataTestDependencies.kotlinJUnit

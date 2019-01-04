@@ -16,6 +16,7 @@ dependencies {
     implementation remoteDependencies.gson
     implementation remoteDependencies.rxJava
     implementation remoteDependencies.rxKotlin
+    implementation remoteDependencies.multidex
 
     testImplementation remoteTestDependencies.junit
     testImplementation remoteTestDependencies.kotlinJUnit

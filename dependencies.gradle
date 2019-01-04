@@ -28,6 +28,7 @@ ext {
     roomVersion = '2.0.0'
     timberVersion = '4.7.1'
     glideVersion = '4.8.0'
+    multidexVersion = '2.0.0'
 
     // Testing
     testCoreVersion = '1.0.0'
@@ -44,7 +45,8 @@ ext {
             kotlin   : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}",
             rxJava   : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
             rxAndroid: "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
-            rxKotlin : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}"
+            rxKotlin : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            multidex : "androidx.multidex:multidex:${multidexVersion}"
     ]
 
     dataTestDependencies = [
@@ -61,6 +63,7 @@ ext {
             roomRxJava  : "androidx.room:room-rxjava2:${roomVersion}",
             rxJava      : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
             rxKotlin    : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            multidex    : "androidx.multidex:multidex:${multidexVersion}"
     ]
 
     cacheTestDependencies = [
@@ -84,7 +87,8 @@ ext {
             okHttpLogger     : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
             gson             : "com.google.code.gson:gson:${gsonVersion}",
             rxJava           : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
-            rxKotlin         : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}"
+            rxKotlin         : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            multidex         : "androidx.multidex:multidex:${multidexVersion}"
     ]
 
     remoteTestDependencies = [
@@ -110,7 +114,8 @@ ext {
             rxAndroid           : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
             rxKotlin            : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
             glide               : "com.github.bumptech.glide:glide:${glideVersion}",
-            timber              : "com.jakewharton.timber:timber:${timberVersion}"
+            timber              : "com.jakewharton.timber:timber:${timberVersion}",
+            multidex            : "androidx.multidex:multidex:${multidexVersion}"
     ]
 
     mobileUiTestDependencies = [

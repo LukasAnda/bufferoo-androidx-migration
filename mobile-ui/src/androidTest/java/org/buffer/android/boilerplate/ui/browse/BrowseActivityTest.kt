@@ -18,11 +18,13 @@ import org.buffer.android.boilerplate.ui.di.applicationModule
 import org.buffer.android.boilerplate.ui.di.browseModule
 import org.buffer.android.boilerplate.ui.test.util.BufferooFactory
 import org.buffer.android.boilerplate.ui.test.util.RecyclerViewMatcher
+import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.koin.standalone.StandAloneContext.loadKoinModules
+import org.koin.standalone.StandAloneContext.stopKoin
 import org.koin.standalone.inject
 import org.koin.test.KoinTest
 import org.koin.test.declareMock
@@ -39,6 +41,11 @@ class BrowseActivityTest: KoinTest {
     fun setUp() {
         loadKoinModules(applicationModule, browseModule)
         declareMock<BufferooRepository>()
+    }
+
+    @After
+    fun cleanUp(){
+        stopKoin()
     }
 
     @Test

@@ -36,6 +36,13 @@ android {
         abortOnError false
         ignoreWarnings true
     }
+
+    configurations.all {
+        resolutionStrategy {
+            force 'net.bytebuddy:byte-buddy:1.8.22'
+            force 'net.bytebuddy:byte-buddy-agent:1.8.22'
+        }
+    }
 }
 
 dependencies {
@@ -62,6 +69,7 @@ dependencies {
     implementation mobileUiDependencies.rxKotlin
     implementation mobileUiDependencies.glide
     implementation mobileUiDependencies.timber
+    implementation mobileUiDependencies.multidex
 
     testImplementation mobileUiTestDependencies.kotlinJUnit
     androidTestImplementation mobileUiTestDependencies.lifecycleTest
